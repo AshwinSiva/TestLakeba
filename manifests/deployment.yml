@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ashwinsivatestlakeba 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ashwinsivatestlakeba
+  template:
+    metadata:
+      labels:
+        app: ashwinsivatestlakeba 
+    spec:
+      containers:
+        - name: ashwinsivatestlakeba 
+          image: abx13.azurecr.io/ashwinsivatestlakeba
+          ports:
+          - containerPort: 80
